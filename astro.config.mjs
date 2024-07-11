@@ -7,4 +7,5 @@ import icon from "astro-icon";
 export default defineConfig({
   integrations: [tailwind(), icon(), ],
   site: 'https://nimixx.github.io',
+  base: 'nimixx_wtf',
 });
