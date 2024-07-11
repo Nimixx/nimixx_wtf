@@ -22,8 +22,8 @@ const playable = Astro.props.playable || false;
       </iframe>
     </div>
   ) : (
-    <div class="w-full aspect-video rounded flex items-center justify-center bg-neutral-950 text-white">
-      <p class="animate-pulse">New video coming soon...</p>
+    <div class="w-full aspect-video rounded flex items-center justify-center bg-neutral-950 text-white relative">
+      <img class="animate-pulse" src="/Epizoda_1.webp" alt="featured thumbnail"/>
     </div>
   )}
 </div>
