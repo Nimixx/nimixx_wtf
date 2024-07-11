@@ -1,0 +1,5 @@
+---
+const { tag: Tag = 'h2', title, className = '' } = Astro.props;
+---
+
+<Tag class={`text-l font-medium ${className}`}>{title}</Tag>

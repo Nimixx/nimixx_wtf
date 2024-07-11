@@ -1,0 +1,51 @@
+---
+const listItems = [
+  {
+    title: "QuickBuild Tools 🧰",
+    description: "Currently in development",
+    url: "",
+  },
+  {
+    title: "Techstack 🔮",
+    description: "Html, CSS, JS is all you need to know",
+  },
+  {
+    title: "Courses 🧊",
+    description: "Currently in development",
+  },
+  {
+    title: "Best coding sound 👌",
+    description: "musicforprogramming.net →",
+    url: "https://musicforprogramming.net/",
+  },
+];
+---
+
+<ul class="flex flex-col gap-4">
+  {
+    listItems.map((item) => (
+      <li class="w-full h-16">
+        {item.url ? (
+          <a
+            class="w-full h-full flex items-center gap-4"
+            href={item.url}
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="flex flex-col">
+              <h3 class="text-l font-medium">{item.title}</h3>
+              <p class="text-base text-neutral-400">{item.description}</p>
+            </div>
+          </a>
+        ) : (
+          <div class="w-full h-full flex items-center gap-4">
+            <div class="flex flex-col">
+              <h3 class="text-l font-medium">{item.title}</h3>
+              <p class="text-base text-neutral-400">{item.description}</p>
+            </div>
+          </div>
+        )}
+      </li>
+    ))
+  }
+</ul>

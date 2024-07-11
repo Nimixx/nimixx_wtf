@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Embed from "../components/Embed.astro";
+import Board from "../components/Board.astro";
+import Heading from "../components/Heading.astro";
+import Divider from "../components/Divider.astro";
+import youtubeData from "../data/youtube_id.json";
+
+const videoData = youtubeData.data[0];
+---
+
+<Layout title="Nimixx . WebDev . IndieDev">
+  <h1 class="text-2xl font-semibold">
+    Hi, I'm <span class="bg-violet-400 text-neutral-950">Nimixx</span>
+  </h1>
+  <p class="text-neutral-400">
+    As a laid-back indie web-developer, I do web development for the pure joy of
+    creating. I love the freedom to explore unusual ideas and bring unique web
+    projects to life. Whether it's a playful website or a useful app, I strive
+    to add a bit of magic and fun to the digital world. For me, coding is an
+    enjoyable journey full of endless possibilities.
+  </p>
+  <Divider />
+  <Heading className="text-amber-400" tag="h2" title="Personal projects" />
+  <Board />
+  <Heading className="text-rose-400" tag="h2" title="Latest video" />
+  <Embed src={videoData.youtube_id} playable={videoData.playable} />
+</Layout>
